@@ -1,0 +1,11 @@
+# # AssetRemovedEvent
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | [**\Celum\Client\Model\EventType**](EventType.md) |  |
+**entity** | [**\Celum\Client\Model\Asset**](Asset.md) | The asset that the event is related to | [optional]
+**from_collection_id** | **int** | The ID of the collection the asset was removed from | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
