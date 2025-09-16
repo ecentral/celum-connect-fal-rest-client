@@ -420,8 +420,8 @@ class Version implements ModelInterface, ArrayAccess, \JsonSerializable
         if (($id > 9223372036854775807)) {
             throw new \InvalidArgumentException('invalid value for $id when calling Version., must be smaller than or equal to 9223372036854775807.');
         }
-        if (($id < 1)) {
-            throw new \InvalidArgumentException('invalid value for $id when calling Version., must be bigger than or equal to 1.');
+        if (($id < 0)) {
+            throw new \InvalidArgumentException('invalid value for $id when calling Version., must be bigger than or equal to 1.'.$id);
         }
 
         $this->container['id'] = $id;
