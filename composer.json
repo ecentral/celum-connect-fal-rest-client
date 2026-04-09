@@ -1,5 +1,5 @@
 {
-    "name": "brix/celum-connect-fal-rest-client",
+    "name": "ecentral/celum-connect-fal-rest-client",
     "description": "### Authorization If you are already logged into CELUM Content via browser, no further authorization is required. Otherwise, please use one of the below methods:   1. Click on 'Authorize' on the right and either provide an API Key, type in your username/password or use OpenID Connect to log in. 2. OpenId implicit flow is disabled for security reasons and will not work as Authorization option.   ### Creating an asset  1. Request upload via [upload endpoint](#/Upload/requestUpload). The endpoint will return a URl for uploading the binary and a upload handle to identify the upload. 2. Upload the content of your asset by sending a POST request to the upload URL from step 1 and setting the ```Content-Type``` header to ```application/octet-stream```. Optionally, you can also use multipart upload with ```multipart/form-data``` as ```Content-Type``` - like our Nova UI. 3. Create the asset via [create asset endpoint](#/Assets/createAssetInCollection) by passing in the upload handle from step 1 together with other parameters.",
     "keywords": [
         "openapitools",
@@ -10,6 +10,7 @@
         "rest",
         "api"
     ],
+    "version": "1.0.0",
     "homepage": "https://openapi-generator.tech",
     "license": "unlicense",
     "authors": [
