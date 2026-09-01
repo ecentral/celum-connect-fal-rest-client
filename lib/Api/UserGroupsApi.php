@@ -1,4 +1,5 @@
 <?php
+
 /**
  * UserGroupsApi
  * PHP version 8.1
@@ -187,7 +188,7 @@ class UserGroupsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -220,7 +221,7 @@ class UserGroupsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -283,7 +284,7 @@ class UserGroupsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -386,7 +387,7 @@ class UserGroupsApi
         if ($user_group_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$user_group_id" when calling UserGroupsApi.getUserGroupById, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/user-groups/{userGroupId}';
@@ -541,7 +542,7 @@ class UserGroupsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -574,7 +575,7 @@ class UserGroupsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -637,7 +638,7 @@ class UserGroupsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -746,19 +747,19 @@ class UserGroupsApi
         if ($user_id !== null && $user_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$user_id" when calling UserGroupsApi.getUserGroups, must be bigger than or equal to 1.');
         }
-        
+
 
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling UserGroupsApi.getUserGroups, must be bigger than or equal to 1.');
         }
-        
+
         if ($size !== null && $size > 200) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling UserGroupsApi.getUserGroups, must be smaller than or equal to 200.');
         }
         if ($size !== null && $size < 1) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling UserGroupsApi.getUserGroups, must be bigger than or equal to 1.');
         }
-        
+
 
 
 

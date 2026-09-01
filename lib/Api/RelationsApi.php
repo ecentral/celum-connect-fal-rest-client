@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RelationsApi
  * PHP version 8.1
@@ -196,7 +197,7 @@ class RelationsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -229,7 +230,7 @@ class RelationsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -292,7 +293,7 @@ class RelationsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -573,7 +574,7 @@ class RelationsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -663,7 +664,7 @@ class RelationsApi
         if ($relation_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$relation_id" when calling RelationsApi.deleteRelation, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/relations/{relationId}';
@@ -816,7 +817,7 @@ class RelationsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -849,7 +850,7 @@ class RelationsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -912,7 +913,7 @@ class RelationsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1024,9 +1025,9 @@ class RelationsApi
         if ($relation_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$relation_id" when calling RelationsApi.getRelationById, must be bigger than or equal to 1.');
         }
-        
 
-        
+
+
 
 
 
@@ -1217,7 +1218,7 @@ class RelationsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -1250,7 +1251,7 @@ class RelationsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -1313,7 +1314,7 @@ class RelationsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1440,29 +1441,29 @@ class RelationsApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling RelationsApi.getRelations, must be bigger than or equal to 1.');
         }
-        
+
 
         if ($type_id !== null && $type_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$type_id" when calling RelationsApi.getRelations, must be bigger than or equal to 1.');
         }
-        
+
         if ($version_id !== null && $version_id < 0) {
             throw new \InvalidArgumentException('invalid value for "$version_id" when calling RelationsApi.getRelations, must be bigger than or equal to 0.');
         }
-        
+
 
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling RelationsApi.getRelations, must be bigger than or equal to 1.');
         }
-        
+
         if ($size !== null && $size > 200) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling RelationsApi.getRelations, must be smaller than or equal to 200.');
         }
         if ($size !== null && $size < 1) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling RelationsApi.getRelations, must be bigger than or equal to 1.');
         }
-        
-        
+
+
 
 
 
@@ -1685,7 +1686,7 @@ class RelationsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -1718,7 +1719,7 @@ class RelationsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -1781,7 +1782,7 @@ class RelationsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1887,7 +1888,7 @@ class RelationsApi
         if ($relation_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$relation_id" when calling RelationsApi.updateRelation, must be bigger than or equal to 1.');
         }
-        
+
         // verify the required parameter 'update_relation' is set
         if ($update_relation === null || (is_array($update_relation) && count($update_relation) === 0)) {
             throw new \InvalidArgumentException(

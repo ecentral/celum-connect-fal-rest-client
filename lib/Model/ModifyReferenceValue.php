@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ModifyReferenceValue
  *
@@ -445,7 +446,7 @@ class ModifyReferenceValue extends UpdateReferenceValue
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

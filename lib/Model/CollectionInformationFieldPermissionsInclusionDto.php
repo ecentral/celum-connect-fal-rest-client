@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CollectionInformationFieldPermissionsInclusionDto
  *
@@ -377,7 +378,7 @@ class CollectionInformationFieldPermissionsInclusionDto extends CollectionInclus
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

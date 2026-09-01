@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CollectionsApi
  * PHP version 8.1
@@ -199,7 +200,7 @@ class CollectionsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -232,7 +233,7 @@ class CollectionsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -295,7 +296,7 @@ class CollectionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -576,7 +577,7 @@ class CollectionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -666,7 +667,7 @@ class CollectionsApi
         if ($collection_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$collection_id" when calling CollectionsApi.deleteCollection, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/collections/{collectionId}';
@@ -813,7 +814,7 @@ class CollectionsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -846,7 +847,7 @@ class CollectionsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -909,7 +910,7 @@ class CollectionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1165,7 +1166,7 @@ class CollectionsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -1198,7 +1199,7 @@ class CollectionsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -1261,7 +1262,7 @@ class CollectionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1379,11 +1380,11 @@ class CollectionsApi
         if ($collection_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$collection_id" when calling CollectionsApi.getCollection, must be bigger than or equal to 1.');
         }
-        
 
 
 
-        
+
+
 
 
 
@@ -1608,7 +1609,7 @@ class CollectionsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -1641,7 +1642,7 @@ class CollectionsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -1704,7 +1705,7 @@ class CollectionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1850,11 +1851,11 @@ class CollectionsApi
         if ($parent_id !== null && $parent_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$parent_id" when calling CollectionsApi.getCollections, must be bigger than or equal to 1.');
         }
-        
+
         if ($type_id !== null && $type_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$type_id" when calling CollectionsApi.getCollections, must be bigger than or equal to 1.');
         }
-        
+
 
 
 
@@ -1866,17 +1867,17 @@ class CollectionsApi
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling CollectionsApi.getCollections, must be bigger than or equal to 1.');
         }
-        
+
         if ($size !== null && $size > 200) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling CollectionsApi.getCollections, must be smaller than or equal to 200.');
         }
         if ($size !== null && $size < 1) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling CollectionsApi.getCollections, must be bigger than or equal to 1.');
         }
-        
 
 
-        
+
+
 
 
 
@@ -2171,7 +2172,7 @@ class CollectionsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -2204,7 +2205,7 @@ class CollectionsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -2267,7 +2268,7 @@ class CollectionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -2373,7 +2374,7 @@ class CollectionsApi
         if ($collection_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$collection_id" when calling CollectionsApi.updateCollection, must be bigger than or equal to 1.');
         }
-        
+
         // verify the required parameter 'update_collection' is set
         if ($update_collection === null || (is_array($update_collection) && count($update_collection) === 0)) {
             throw new \InvalidArgumentException(

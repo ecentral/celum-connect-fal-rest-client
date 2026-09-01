@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SetTextValue
  *
@@ -411,7 +412,7 @@ class SetTextValue extends UpdateTextValue
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

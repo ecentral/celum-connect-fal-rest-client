@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DefaultApi
  * PHP version 8.1
@@ -236,7 +237,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -462,7 +463,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -688,7 +689,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -914,7 +915,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -1140,7 +1141,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -1366,7 +1367,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -1592,7 +1593,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -1818,7 +1819,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -2044,7 +2045,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -2270,7 +2271,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -2496,7 +2497,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -2722,7 +2723,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -2948,7 +2949,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -3174,7 +3175,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -3400,7 +3401,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -3626,7 +3627,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -3852,7 +3853,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }
@@ -4078,7 +4079,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
-        
+
 
             throw $e;
         }

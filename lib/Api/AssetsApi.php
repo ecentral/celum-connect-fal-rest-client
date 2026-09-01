@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AssetsApi
  * PHP version 8.1
@@ -199,7 +200,7 @@ class AssetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -232,7 +233,7 @@ class AssetsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -295,7 +296,7 @@ class AssetsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -576,7 +577,7 @@ class AssetsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -666,7 +667,7 @@ class AssetsApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling AssetsApi.deleteAsset, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/assets/{assetId}';
@@ -813,7 +814,7 @@ class AssetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -846,7 +847,7 @@ class AssetsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -909,7 +910,7 @@ class AssetsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1165,7 +1166,7 @@ class AssetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -1198,7 +1199,7 @@ class AssetsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -1261,7 +1262,7 @@ class AssetsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1379,10 +1380,10 @@ class AssetsApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling AssetsApi.getAsset, must be bigger than or equal to 1.');
         }
-        
 
 
-        
+
+
 
 
 
@@ -1600,7 +1601,7 @@ class AssetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -1633,7 +1634,7 @@ class AssetsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -1696,7 +1697,7 @@ class AssetsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1830,7 +1831,7 @@ class AssetsApi
         if ($parent_id !== null && $parent_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$parent_id" when calling AssetsApi.getAssets, must be bigger than or equal to 1.');
         }
-        
+
 
 
 
@@ -1838,17 +1839,17 @@ class AssetsApi
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling AssetsApi.getAssets, must be bigger than or equal to 1.');
         }
-        
+
         if ($size !== null && $size > 200) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling AssetsApi.getAssets, must be smaller than or equal to 200.');
         }
         if ($size !== null && $size < 1) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling AssetsApi.getAssets, must be bigger than or equal to 1.');
         }
-        
 
 
-        
+
+
 
 
 
@@ -2108,7 +2109,7 @@ class AssetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -2141,7 +2142,7 @@ class AssetsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -2204,7 +2205,7 @@ class AssetsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -2310,7 +2311,7 @@ class AssetsApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling AssetsApi.updateAsset, must be bigger than or equal to 1.');
         }
-        
+
         // verify the required parameter 'update_asset' is set
         if ($update_asset === null || (is_array($update_asset) && count($update_asset) === 0)) {
             throw new \InvalidArgumentException(

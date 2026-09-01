@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RoleAssignee
  *
@@ -414,7 +415,7 @@ class RoleAssignee implements ModelInterface, ArrayAccess, \JsonSerializable
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

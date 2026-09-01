@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CollectionTypesApi
  * PHP version 8.1
@@ -189,7 +190,7 @@ class CollectionTypesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -222,7 +223,7 @@ class CollectionTypesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -285,7 +286,7 @@ class CollectionTypesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -391,7 +392,7 @@ class CollectionTypesApi
         if ($collection_type_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$collection_type_id" when calling CollectionTypesApi.getCollectionType, must be bigger than or equal to 1.');
         }
-        
+
 
 
 
@@ -550,7 +551,7 @@ class CollectionTypesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -583,7 +584,7 @@ class CollectionTypesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -646,7 +647,7 @@ class CollectionTypesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }

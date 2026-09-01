@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AssetTypesApi
  * PHP version 8.1
@@ -189,7 +190,7 @@ class AssetTypesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -222,7 +223,7 @@ class AssetTypesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -285,7 +286,7 @@ class AssetTypesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -391,7 +392,7 @@ class AssetTypesApi
         if ($asset_type_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_type_id" when calling AssetTypesApi.getAssetType, must be bigger than or equal to 1.');
         }
-        
+
 
 
 
@@ -548,7 +549,7 @@ class AssetTypesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -581,7 +582,7 @@ class AssetTypesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -644,7 +645,7 @@ class AssetTypesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }

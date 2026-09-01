@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AboutApi
  * PHP version 8.1
@@ -182,7 +183,7 @@ class AboutApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',

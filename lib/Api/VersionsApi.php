@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VersionsApi
  * PHP version 8.1
@@ -192,7 +193,7 @@ class VersionsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -225,7 +226,7 @@ class VersionsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -288,7 +289,7 @@ class VersionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -394,7 +395,7 @@ class VersionsApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling VersionsApi.addVersion, must be bigger than or equal to 1.');
         }
-        
+
         // verify the required parameter 'add_version' is set
         if ($add_version === null || (is_array($add_version) && count($add_version) === 0)) {
             throw new \InvalidArgumentException(
@@ -592,7 +593,7 @@ class VersionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -685,7 +686,7 @@ class VersionsApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling VersionsApi.deleteVersion, must be bigger than or equal to 1.');
         }
-        
+
         // verify the required parameter 'version_id' is set
         if ($version_id === null || (is_array($version_id) && count($version_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -695,7 +696,7 @@ class VersionsApi
         if ($version_id < 0) {
             throw new \InvalidArgumentException('invalid value for "$version_id" when calling VersionsApi.deleteVersion, must be bigger than or equal to 0.');
         }
-        
+
 
 
         $resourcePath = '/assets/{assetId}/versions/{versionId}';
@@ -854,7 +855,7 @@ class VersionsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -887,7 +888,7 @@ class VersionsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -950,7 +951,7 @@ class VersionsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1059,18 +1060,18 @@ class VersionsApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling VersionsApi.getVersions, must be bigger than or equal to 1.');
         }
-        
+
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling VersionsApi.getVersions, must be bigger than or equal to 1.');
         }
-        
+
         if ($size !== null && $size > 200) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling VersionsApi.getVersions, must be smaller than or equal to 200.');
         }
         if ($size !== null && $size < 1) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling VersionsApi.getVersions, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/assets/{assetId}/versions';

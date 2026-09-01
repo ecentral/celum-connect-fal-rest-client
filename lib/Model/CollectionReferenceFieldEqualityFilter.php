@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CollectionReferenceFieldEqualityFilter
  *
@@ -525,7 +526,7 @@ class CollectionReferenceFieldEqualityFilter extends CollectionFilter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

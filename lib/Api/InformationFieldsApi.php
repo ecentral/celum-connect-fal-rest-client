@@ -1,4 +1,5 @@
 <?php
+
 /**
  * InformationFieldsApi
  * PHP version 8.1
@@ -186,7 +187,7 @@ class InformationFieldsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -219,7 +220,7 @@ class InformationFieldsApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -282,7 +283,7 @@ class InformationFieldsApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }

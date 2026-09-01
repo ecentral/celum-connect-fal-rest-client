@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ModifyExternalReferences
  *
@@ -445,7 +446,7 @@ class ModifyExternalReferences extends UpdateExternalReferences
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

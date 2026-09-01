@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Version
  *
@@ -770,7 +771,7 @@ class Version implements ModelInterface, ArrayAccess, \JsonSerializable
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

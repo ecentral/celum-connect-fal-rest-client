@@ -1,4 +1,5 @@
 <?php
+
 /**
  * GenericValidationFault
  *
@@ -374,7 +375,7 @@ class GenericValidationFault extends ValidationFault
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

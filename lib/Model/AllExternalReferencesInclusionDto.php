@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AllExternalReferencesInclusionDto
  *
@@ -377,7 +378,7 @@ class AllExternalReferencesInclusionDto extends AssetInclusionDto
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

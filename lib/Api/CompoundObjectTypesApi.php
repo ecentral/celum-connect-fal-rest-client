@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CompoundObjectTypesApi
  * PHP version 8.1
@@ -189,7 +190,7 @@ class CompoundObjectTypesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -222,7 +223,7 @@ class CompoundObjectTypesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -285,7 +286,7 @@ class CompoundObjectTypesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -543,7 +544,7 @@ class CompoundObjectTypesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -576,7 +577,7 @@ class CompoundObjectTypesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -639,7 +640,7 @@ class CompoundObjectTypesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }

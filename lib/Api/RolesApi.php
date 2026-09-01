@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RolesApi
  * PHP version 8.1
@@ -187,7 +188,7 @@ class RolesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -220,7 +221,7 @@ class RolesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -283,7 +284,7 @@ class RolesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -386,7 +387,7 @@ class RolesApi
         if ($role_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$role_id" when calling RolesApi.getRole, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/roles/{roleId}';
@@ -531,7 +532,7 @@ class RolesApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -564,7 +565,7 @@ class RolesApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -627,7 +628,7 @@ class RolesApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
