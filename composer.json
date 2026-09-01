@@ -11,12 +11,36 @@
         "api"
     ],
     "version": "1.0.0",
-    "homepage": "https://openapi-generator.tech",
+    "homepage": "https://ecentral.de/fairway-dam-typo3",
     "license": "unlicense",
     "authors": [
         {
+            "name": "eCentral GmbH",
+            "role": "Project Owner",
+            "email": "support@ecentral.de",
+            "homepage": "https://www.ecentral.de"
+        },
+        {
             "name": "OpenAPI",
             "homepage": "https://openapi-generator.tech"
+        },
+        {
+            "name": "Denis Doerner",
+            "role": "Developer",
+            "email": "d.doerner@ecentral.de",
+            "homepage": "https://www.ecentral.de"
+        },
+        {
+            "name": "Alex Hamann",
+            "role": "Developer",
+            "email": "a.hamann@ecentral.de",
+            "homepage": "https://www.ecentral.de"
+        },
+        {
+            "name": "Mohamad Omeirat",
+            "role": "Developer",
+            "email": "m.omeirat@ecentral.de",
+            "homepage": "https://www.ecentral.de"
         }
     ],
     "require": {
@@ -28,11 +52,31 @@
         "guzzlehttp/psr7": "^1.7 || ^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.0 || ^9.0",
-        "friendsofphp/php-cs-fixer": "^3.5"
+        "phpstan/phpstan": "^2.2",
+        "saschaegerer/phpstan-typo3": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "rector/rector": "^2.5",
+        "ssch/typo3-rector": "^3.15",
+        "typo3/cms-backend": "^12 || ^13",
+        "typo3/cms-fluid": "^12 || ^13",
+        "typo3/coding-standards": "^0.9"
     },
     "autoload": {
         "psr-4": { "Celum\\Client\\" : "lib/" }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true,
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        }
+    },
+    "scripts": {
+        "cs:check": "php-cs-fixer fix --dry-run --diff --allow-risky=yes --using-cache=no --config=.php-cs-fixer.dist.php",
+        "cs:fix": "php-cs-fixer fix --diff --allow-risky=yes --using-cache=no --config=.php-cs-fixer.dist.php",
+        "analyze:php": "phpstan analyse --ansi --no-progress --memory-limit=768M -c phpstan.neon",
+        "rector:check": "rector process --dry-run --no-progress-bar --memory-limit=768M",
+        "rector:fix": "rector process --no-progress-bar --memory-limit=768M"
     },
     "autoload-dev": {
         "psr-4": { "Celum\\Client\\Test\\" : "test/" }

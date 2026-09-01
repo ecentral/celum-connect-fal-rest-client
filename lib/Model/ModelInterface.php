@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ModelInterface
  *
@@ -28,13 +29,16 @@
 
 namespace Celum\Client\Model;
 
+use ArrayAccess;
+
 /**
  * Interface abstracting model access.
  *
  * @package Celum\Client\Model
  * @author  OpenAPI Generator team
+ * @extends ArrayAccess<string, mixed>
  */
-interface ModelInterface
+interface ModelInterface extends ArrayAccess
 {
     /**
      * The original name of the model.
