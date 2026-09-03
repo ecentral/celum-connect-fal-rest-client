@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CollectionInformationFieldsInclusionDto
  *
@@ -411,7 +412,7 @@ class CollectionInformationFieldsInclusionDto extends CollectionInclusionDto
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SetLock
  *
@@ -414,7 +415,7 @@ class SetLock extends UpdateLock
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

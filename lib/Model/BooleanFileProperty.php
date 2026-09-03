@@ -1,4 +1,5 @@
 <?php
+
 /**
  * BooleanFileProperty
  *
@@ -411,7 +412,7 @@ class BooleanFileProperty extends FilePropertyObject
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

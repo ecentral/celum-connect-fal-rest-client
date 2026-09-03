@@ -1,4 +1,5 @@
 <?php
+
 /**
  * InformationFieldObject
  *
@@ -574,8 +575,8 @@ class InformationFieldObject implements ModelInterface, ArrayAccess, \JsonSerial
             array_push($this->openAPINullablesSetToNull, 'default_value');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('default_value', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('default_value', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -702,7 +703,7 @@ class InformationFieldObject implements ModelInterface, ArrayAccess, \JsonSerial
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

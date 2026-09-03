@@ -1,4 +1,5 @@
 <?php
+
 /**
  * LocalizedTextField
  *
@@ -567,7 +568,7 @@ class LocalizedTextField extends InformationFieldObject
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

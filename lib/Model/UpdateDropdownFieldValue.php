@@ -1,4 +1,5 @@
 <?php
+
 /**
  * UpdateDropdownFieldValue
  *
@@ -414,7 +415,7 @@ class UpdateDropdownFieldValue extends UpdateInformationFieldValueObject
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

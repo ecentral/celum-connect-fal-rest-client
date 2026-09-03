@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ClearTextValue
  *
@@ -377,7 +378,7 @@ class ClearTextValue extends UpdateTextValue
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

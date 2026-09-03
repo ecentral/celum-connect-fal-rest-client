@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AssetModificationDateRangeFilter
  *
@@ -445,7 +446,7 @@ class AssetModificationDateRangeFilter extends AssetFilter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

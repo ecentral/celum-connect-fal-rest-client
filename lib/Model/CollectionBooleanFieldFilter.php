@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CollectionBooleanFieldFilter
  *
@@ -488,7 +489,7 @@ class CollectionBooleanFieldFilter extends CollectionFilter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

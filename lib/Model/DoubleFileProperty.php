@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DoubleFileProperty
  *
@@ -411,7 +412,7 @@ class DoubleFileProperty extends FilePropertyObject
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

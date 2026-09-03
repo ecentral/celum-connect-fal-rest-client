@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DownloadApi
  * PHP version 8.1
@@ -185,7 +186,7 @@ class DownloadApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -218,7 +219,7 @@ class DownloadApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -281,7 +282,7 @@ class DownloadApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -390,7 +391,7 @@ class DownloadApi
         if ($download_format_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$download_format_id" when calling DownloadApi.requestBulkDownload, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/assets/download';
@@ -551,7 +552,7 @@ class DownloadApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -584,7 +585,7 @@ class DownloadApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -647,7 +648,7 @@ class DownloadApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -756,7 +757,7 @@ class DownloadApi
         if ($asset_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$asset_id" when calling DownloadApi.requestDownload, must be bigger than or equal to 1.');
         }
-        
+
         // verify the required parameter 'download_format_id' is set
         if ($download_format_id === null || (is_array($download_format_id) && count($download_format_id) === 0)) {
             throw new \InvalidArgumentException(

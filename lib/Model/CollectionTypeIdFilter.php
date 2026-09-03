@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CollectionTypeIdFilter
  *
@@ -416,7 +417,7 @@ class CollectionTypeIdFilter extends CollectionFilter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

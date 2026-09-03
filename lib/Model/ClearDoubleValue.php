@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ClearDoubleValue
  *
@@ -377,7 +378,7 @@ class ClearDoubleValue extends UpdateDoubleValue
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

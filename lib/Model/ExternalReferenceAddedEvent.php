@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ExternalReferenceAddedEvent
  *
@@ -479,7 +480,7 @@ class ExternalReferenceAddedEvent extends Event
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

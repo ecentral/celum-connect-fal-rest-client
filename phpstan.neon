@@ -1,0 +1,33 @@
+parameters:
+    level: 6
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - lib
+    ignoreErrors:
+        -
+            identifier: missingType.iterableValue
+        -
+            identifier: argument.type
+        -
+            identifier: booleanOr.alwaysFalse
+        -
+            identifier: closure.unusedUse
+        -
+            identifier: function.alreadyNarrowedType
+        -
+            identifier: function.impossibleType
+        -
+            identifier: generics.noParent
+        -
+            identifier: identical.alwaysFalse
+        -
+            identifier: if.alwaysFalse
+        -
+            identifier: isset.variable
+        -
+            identifier: method.unused
+        -
+            identifier: notIdentical.alwaysTrue
+        -
+            identifier: nullCoalesce.expr
+    reportUnmatchedIgnoredErrors: false

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AssetFulltextFilter
  *
@@ -482,7 +483,7 @@ class AssetFulltextFilter extends AssetFilter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

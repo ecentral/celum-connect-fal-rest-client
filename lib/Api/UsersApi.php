@@ -1,4 +1,5 @@
 <?php
+
 /**
  * UsersApi
  * PHP version 8.1
@@ -188,7 +189,7 @@ class UsersApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -221,7 +222,7 @@ class UsersApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -284,7 +285,7 @@ class UsersApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -513,7 +514,7 @@ class UsersApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -546,7 +547,7 @@ class UsersApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -609,7 +610,7 @@ class UsersApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -712,7 +713,7 @@ class UsersApi
         if ($user_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$user_id" when calling UsersApi.getUserById, must be bigger than or equal to 1.');
         }
-        
+
 
 
         $resourcePath = '/users/{userId}';
@@ -869,7 +870,7 @@ class UsersApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 503:
                     return $this->handleResponseWithDataType(
                         '\Celum\Client\Model\Error',
@@ -902,7 +903,7 @@ class UsersApi
                     );
             }
 
-            
+
 
             if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
@@ -965,7 +966,7 @@ class UsersApi
                     $e->setResponseObject($data);
                     throw $e;
             }
-        
+
 
             throw $e;
         }
@@ -1078,19 +1079,19 @@ class UsersApi
         if ($user_group_id !== null && $user_group_id < 1) {
             throw new \InvalidArgumentException('invalid value for "$user_group_id" when calling UsersApi.getUserByName, must be bigger than or equal to 1.');
         }
-        
+
 
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling UsersApi.getUserByName, must be bigger than or equal to 1.');
         }
-        
+
         if ($size !== null && $size > 200) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling UsersApi.getUserByName, must be smaller than or equal to 200.');
         }
         if ($size !== null && $size < 1) {
             throw new \InvalidArgumentException('invalid value for "$size" when calling UsersApi.getUserByName, must be bigger than or equal to 1.');
         }
-        
+
 
 
 
